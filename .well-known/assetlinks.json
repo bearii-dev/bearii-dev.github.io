@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.waypointlive",
+      "sha256_cert_fingerprints": [
+        "7F:16:EF:57:49:99:26:C7:26:E3:24:25:F2:97:6D:75:40:C3:D5:B0:A3:EC:47:56:46:2A:7F:A3:FF:13:0A:D6"
+      ]
+    }
+  }
+]
