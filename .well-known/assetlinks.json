@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.example.waypointlive",
       "sha256_cert_fingerprints": [
-        "7F:16:EF:57:49:99:26:C7:26:E3:24:25:F2:97:6D:75:40:C3:D5:B0:A3:EC:47:56:46:2A:7F:A3:FF:13:0A:D6"
+        "7F:16:EF:57:49:99:26:C7:26:E3:24:25:F2:97:6D:75:40:C3:D5:B0:A3:EC:47:56:46:2A:7F:A3:FF:13:0A:D6",
+        "1D:E2:4F:0A:D2:38:DA:6C:D7:29:8F:20:B6:91:F1:FB:F9:15:6D:3F:A5:8B:ED:7D:54:7B:82:EB:B6:FB:4E:4D"
       ]
     }
   }
