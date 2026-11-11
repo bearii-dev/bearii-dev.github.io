@@ -119,7 +119,7 @@
       // Android: intent:// opens the app directly (Chrome and most in-app browsers).
       var isAndroid = /android/i.test(navigator.userAgent);
       document.getElementById("open").href = isAndroid
-        ? "intent://invite/" + code + "#Intent;scheme=waypointlive;package=com.example.waypointlive;end"
+        ? "intent://invite/" + code + "#Intent;scheme=waypointlive;package=dev.bearii.waypointlive;end"
         : "waypointlive://invite/" + code;
 
       var copyBtn = document.getElementById("copy");
