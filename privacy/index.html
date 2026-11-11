@@ -83,7 +83,7 @@
         <li><strong>GitHub Pages:</strong> โฮสต์หน้าลิงก์เชิญและหน้านี้</li>
       </ul>
 
-      <h2>การเก็บรักษาและการลบข้อมูล</h2>
+      <h2 id="delete-th">การเก็บรักษาและการลบข้อมูล</h2>
       <ul>
         <li>ข้อมูลของคุณจะอยู่จนกว่าคุณจะลบบัญชี</li>
         <li><strong>ลบบัญชีในแอป:</strong> การตั้งค่า → ลบบัญชี ระบบจะลบบัญชี โปรไฟล์ ตำแหน่ง การแชร์ และโค้ดเชิญทั้งหมดออกจากเซิร์ฟเวอร์ทันที และกู้คืนไม่ได้</li>
@@ -131,7 +131,7 @@
         <li><strong>GitHub Pages:</strong> hosts the invite page and this page.</li>
       </ul>
 
-      <h2>Retention and deletion</h2>
+      <h2 id="delete">Retention and deletion</h2>
       <ul>
         <li>Your data is kept until you delete your account.</li>
         <li><strong>In the app:</strong> Settings → Delete account. This immediately and permanently deletes your account, profile, location, shares and invites from the server.</li>
@@ -161,7 +161,11 @@
       };
       buttons.forEach(function (b) { b.addEventListener("click", function () { show(b.getAttribute("data-lang")); }); });
       var requested = new URLSearchParams(location.search).get("lang");
-      show(requested === "en" || requested === "th" ? requested : (/^th\b/i.test(navigator.language || "") ? "th" : "en"));
+      // #delete / #delete-th (the Play Console account-deletion link) pick the matching language.
+      var hash = location.hash;
+      var fromHash = hash === "#delete" ? "en" : (hash === "#delete-th" ? "th" : null);
+      show(fromHash || (requested === "en" || requested === "th" ? requested : (/^th\b/i.test(navigator.language || "") ? "th" : "en")));
+      if (fromHash) { var target = document.getElementById(hash.slice(1)); if (target) target.scrollIntoView(); }
     })();
   </script>
 </body>
